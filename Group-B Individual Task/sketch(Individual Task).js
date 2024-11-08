@@ -1,3 +1,4 @@
+//Please click on the Group-B Individual Task file after open the live preview
 let colors = [];
 let bigCircles = [];
 let smallStrokeCircles = [];
