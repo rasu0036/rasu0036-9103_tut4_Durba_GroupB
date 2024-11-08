@@ -42,11 +42,11 @@ function setup() {
 
   // Initialize big circles
   bigCircles = [
-    new Circle(0.1, 0.05, r, colors[0]),
-    new Circle(0.11, 0.43, r, colors[1]),
-    new Circle(0.05, 0.8, r, colors[2]),
-    new Circle(0.35, 0, r, colors[3]),  
-    new Circle(0.3, 0.38, r, colors[4]), 
+    new Circle(0.1, 0.05, r, colors[0]), //1
+    new Circle(0.11, 0.43, r, colors[1]), //2
+    new Circle(0.05, 0.8, r, colors[2]), //3
+    new Circle(0.35, 0, r, colors[3]), //4
+    new Circle(0.3, 0.38, r, colors[4]),//5
     new Circle(0.24, 0.75, r, colors[5]),//6
     new Circle(0.17, 1.1, r, colors[6]),//7
     new Circle(0.5, 0.26, r, colors[7]),//8
@@ -165,6 +165,7 @@ function setup() {
 
 }
 
+//Large Circles
 class Circle {
   constructor(xScale, yScale, r, color) {
     this.xScale = xScale; 
@@ -295,7 +296,7 @@ class SmallStrokeCircle {
           stroke(this.strokeColor);
           strokeWeight(this.strokeWeightVal);
           ellipse(x, y, this.currentR);
-        }
+      }
     }
     drawDashedCircle(x, y, diameter) {
         let numDashes = 20; // Number of dashes in the circle
@@ -379,7 +380,7 @@ function drawDotsAroundCircle2(circle, dotSizeFactor) {
     ellipse(x1, y1, 5 * dotSizeFactor);
   }
 
-  // Draw the second layer of dots
+  // Draw the thrid layer of dots
   for (let i = 0; i < numDots; i++) {
     let angle = i * angleStep;
     let x1 = x2 + cos(angle) * dotRadius5;
@@ -416,29 +417,29 @@ function draw() {
 
   // Add white dots around bigCircles[4] (the fifth circle) in two layers
   drawDotsAroundCircle(bigCircles[4], dotSizeFactor);
-
-  // Add white dots around bigCircles[14] (the fifteenth circle) in two layers
+  
   drawDotsAroundCircle(bigCircles[14], dotSizeFactor);
-
+  
   drawDotsAroundCircle2(bigCircles[1], dotSizeFactor);
-
+  
   drawDotsAroundCircle2(bigCircles[10], dotSizeFactor);
-
+  
   drawDotsAroundCircle2(bigCircles[12], dotSizeFactor);
 
   dotSizeFactor = lerp(dotSizeFactor, targetDotSizeFactor, 0.1);
 
  
-  
 }
 
+//mousePresseed for drawDotsAroundCircle
+// When the mouse is released, dots enlarge
 function mousePressed() {
-  targetDotSizeFactor = 4; // Target size to shrink to 50% of original size
+  targetDotSizeFactor = 4; 
 }
 
 // When the mouse is released, restore the size of the dots
 function mouseReleased() {
-  targetDotSizeFactor = 2; // Target size to restore to 100% of original size
+  targetDotSizeFactor = 2; 
 }
 
 
