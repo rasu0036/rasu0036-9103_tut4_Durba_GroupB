@@ -13,6 +13,8 @@
   - when press ‘a’ on the keyboard, all of the large circles will change to black, emphasizing the elements within them. Enjoy the different atmosphere by moving the mouse around as the large circles turn black.
 #### References of Inspiration
 Through research, I identify artworks that align with my desired visual expression for the visual design of the group project, providing an impression reference for my sketches.
+
+
 ![alt text](Inspiration%201.jpg)
 ![alt text](Inspiration%202.jpg)
 #### Technical explanation
