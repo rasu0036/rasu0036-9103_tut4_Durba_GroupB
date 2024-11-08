@@ -1,4 +1,4 @@
-# Group-B
+# Group-B User Input
 #### Instructions
 - __Geometric Generative Art as Inspiration__
   - Move the mouse slowly over the large circles
